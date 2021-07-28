@@ -12,7 +12,7 @@
   + 相关链接
   ![](https://github.com/HentaiMikuy/Minecraft-H/blob/main/MDimages/otherlinks.jpg)
   + 登录
-  ![](https://github.com/HentaiMikuy/Minecraft-H/blob/main/MDimages/signup.jpg)
+  ![](https://github.com/HentaiMikuy/Minecraft-H/blob/main/MDimages/login.jpg)
   + 注册
   ![](https://github.com/HentaiMikuy/Minecraft-H/blob/main/MDimages/signup.jpg)
 ## （代码仅供参考）
