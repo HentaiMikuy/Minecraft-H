@@ -1,0 +1,98 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    width: 1536px;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* 主页设置 */
+
+.download_top {
+    position: relative;
+    width: 100%;
+    height: 760px;
+    background-image: url(../img/download.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* 下载界面框 */
+
+.download_top .download {
+    position: absolute;
+    float: left;
+    left: 970px;
+    top: 350px;
+    width: 530px;
+    height: 260px;
+    /* background-color: rgba(189,186,177,.4); */
+}
+
+/* 客户端下载按钮 */
+
+.download_top .download .down_btn {
+    position: absolute;
+    float: left;
+    margin: 15px 165px ;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: rgba(189,186,177,.7);
+    border: none;
+    transition: 1s;
+}
+
+.download_top .down_btn a {
+    color: rgba(255, 255, 255, 1);
+    font-size: 30px;
+}
+
+.download:hover > .down_btn {
+    margin-left: 30px;
+}
+
+.download .down_btn:hover {
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 1);
+}
+
+/* 客户端下载信息 */
+
+.download_top .download .down_txt {
+    position: absolute;
+    float: left;
+    top: 70px;
+    left: 190px;
+    opacity: 0;
+    transition: 1s;
+}
+
+.download_top .download .down_txt a {
+    color: rgba(189,186,177, 1);
+    font-size: 25px;
+    transition: 1s;
+}
+
+.download_top .download .down_txt p {
+    font-size: 20px;
+}
+
+.download_top .download .down_txt hr {
+    background-color: rgba(255, 255, 255, .8);
+    height: 5px;
+}
+
+.download:hover > .down_txt {
+    opacity: 1;
+    margin-left: 60px;
+}
+
+.download_top .download .down_txt a:hover {
+    color: black;
+    font-weight: 900;
+}

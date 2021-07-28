@@ -1,0 +1,261 @@
+/* 预处理 */
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    width: 1519.5px;
+}
+
+li {
+    list-style: none;
+}
+
+input,button,select,textarea {
+    outline:none;
+}
+
+a{
+    text-decoration: none;
+}
+
+@font-face {
+	font-family:'hywbJ';
+	src:url('../fonts/hywbJ.ttf');
+}
+
+/*头部导航栏*/
+
+.topbar {
+    position: relative;
+    float: left;
+    top: 0;
+    left: 0;
+    height: 70px;
+    width: 100%;
+    background-color:rgba(255, 255, 255, .5);
+    /* 设置元素的堆叠顺序 */
+    z-index: 100;
+}
+
+.topbar .logo img{
+    position: absolute;
+    float: left;
+    margin: 15px 10px;
+    width: 200px;
+    height: 40px;
+}
+
+/* 图片展示框 */
+
+@keyframes fadeInOutImage {
+    0% {
+        background-image: url(../img/topphotos_1.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    25% {
+        background-image: url(../img/topphotos_2.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    50% {
+        background-image: url(../img/topphotos_3.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    75% {
+        background-image: url(../img/topphotos_4.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    100% {
+       background-image: url(../img/topphotos_5.png);
+       background-repeat: no-repeat;
+       background-size: cover;
+    }
+}
+
+.indexphoto {
+    position: relative;
+    height: 800px;
+    width: auto;
+    margin: 0;
+    padding: 0;
+
+    animation-name: fadeInOutImage;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 15s;
+    animation-direction: normal;
+}
+
+
+
+/* 图片展示框的主视字体 */
+
+.fonts {
+    position: absolute;
+    left: 21%;
+    top: 31%;
+    z-index: 200;
+    font-family: 'hywbJ';
+    font-size: 120px;
+    text-shadow: 0 0 5px #c3c3c3;
+    color:rgba(255, 255, 255, .8);
+    /* background-color: rgba(255, 255 , 255, 0.4);  */
+}
+
+.fonts-bot {
+    position: absolute;
+    z-index: 200;
+    left: 56%;
+    top: 50%;
+    font-size: 30px;
+    text-shadow: 0 0 5px #c3c3c3;
+    color:rgba(255, 255, 255, .8);
+}
+
+.indexphoto hr {
+    position: absolute;
+    margin: 0 auto;
+    border: 0;
+    height: 2px;
+    width: 63%;
+    left: 21%;
+    top: 48%;
+    background-color: rgba(255, 255, 255, .8);
+
+}
+
+
+/* 导航栏 */
+
+.topbar .nav {
+    position: absolute;
+    float: left;
+    left: 170px;
+    margin-left: 50px;
+}
+
+.topbar .nav ul li{
+    float: left;
+    margin: 0 10px;
+}
+
+
+.topbar .nav a {
+    display: block;
+    width: 100px;
+    height: 70px;
+    font-size: 20px;
+    line-height: 70px;
+    text-align:center;
+    color: #050505;
+
+}
+
+#firend {
+    position: absolute;
+    left:260px;
+    margin-left: 220px;
+}
+
+.topbar .nav li:hover {
+    background-color: rgba(255, 255 , 255, 0.4);
+}
+
+
+/* 用户头像 */
+
+.user {
+    position: absolute;
+    width: 170px;
+    height: 70px;
+    right: 50px;
+}
+
+.user .userimg{
+    position: absolute;
+    float: right;
+    left: 50%;
+    margin-left: -35px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-image: url(../img/userimg.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    transition: 1s;
+}
+
+.user_login {
+    display: block;
+    position: absolute;
+    left: 49%;
+    top: 34%;
+    font-size: 19px;
+    opacity: 0;  /*使元素不可见*/
+    color: #2f3542;
+    transition: 1s;
+}
+
+.user:hover > .userimg {
+    margin-left: -85px;
+}
+
+.user:hover > .user_login {
+    opacity: 1;
+}
+
+/* 搜索框 */
+
+.search {
+    position: absolute;
+    top: 50%;
+    left: 1140px;
+    transform: translate(-50%,-50%);
+    background-color: rgba(255, 255 , 255, 0.2);
+    height: 40px;
+    border-radius: 40px;
+    padding: 2px;
+}
+
+.search-btn {
+    color: #ff4757;
+    float: right;
+    background-color: rgba(255, 255 , 255, 0.4);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.search-txt {
+    border: none;
+    background: none;
+    outline: none;
+    float: left;
+    padding: 0;
+    color: #2f3542;
+    font-size: 16px;
+    transition: 0.5s;
+    line-height: 40px;
+    width: 0px;
+}
+
+.search:hover >.search-bth {
+    background: #dfe4ea;
+    color: #2f3542;
+}
+
+.search:hover >.search-txt{
+    width: 240px;
+    padding: 0 6px;
+}
