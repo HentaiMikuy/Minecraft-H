@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>欢迎回来!朋友~</title>
+    <link href="css/login_styles.css" type="text/css" rel="stylesheet">
+    <link href="icon/top.png" type="image/x-icon" rel="icon">
+    <link href="icon/top.png" type="image/x-icon" rel="shortcut icon">
+</head>
+
+<body>
+    <section>
+        <div class="container">
+            <div class="user singinBx">
+                <div class="imgBx"><img src="img/login-top1.png" width="70%"></div>
+                <div class="formBx">
+                    <form>
+                        <h2>登录</h2>
+                        <input type="text" name="" placeholder="用户名">
+                        <input type="password" name="" placeholder="密码">
+                        <input type="submit" name="" value="登录">
+                        <p class="signup">还没账号?赶快加入我们吧!<a href="#" onclick="toggleForm();">注册</a></p>
+                    </form>
+                </div>
+            </div>
+            <div class="user singupBx">
+                <div class="formBx">
+                    <form>
+                        <h2>加入我们吧~</h2>
+                        <input type="text" name="" placeholder="用户名">
+                        <input type="email" name="" placeholder="邮箱">
+                        <input type="password" name="" placeholder="新密码">
+                        <input type="password" name="" placeholder="再次输入新密码">
+                        <input type="submit" name="" value="注册">
+                        <p class="signup">已经有账号了？快来<a href="#" onclick="toggleForm();">登录</a>吧！</p>
+                    </form>
+                </div>
+                <div class="imgBx"><img src="img/login-top2.png" width="70%"></div>
+            </div>
+        </div>
+    </section>
+    <script type="text/javascript">
+        function toggleForm() {
+            var container = document.querySelector('.container');
+            container.classList.toggle('active')
+        }
+    </script>
+</body>
+
+</html>
