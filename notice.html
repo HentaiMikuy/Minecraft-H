@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>服主会时不时更新消息啦</title>
+    <link href="icon/top.png" type="image/x-icon" rel="icon">
+    <link href="icon/top.png" type="image/x-icon" rel="shortcut icon">
+    <link href="css/notice.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="a">
+        <div class="b"></div>
+        <div class="c">
+            <div class="d dd"><img src="img/notice_img/1.jpg" alt="notice1"></div>
+            <div class="d d1"><img src="img/notice_img/2.jpg" alt="notice2"></div>
+            <div class="d"><img src="img/notice_img/3.jpg" alt="notice3"></div>
+            <div class="d"><img src="img/notice_img/4.jpg" alt="notice4"></div>
+            <div class="d"><img src="img/notice_img/5.jpg" alt="notice5"></div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        let b = document.querySelector(".b")
+        let d = document.getElementsByClassName("d")
+        let time
+        let index = 0
+        // 重置函数
+        let a = function () {
+            for (let i = 0; i < d.length; i++) {
+                d[i].className = "d"
+            }
+        }
+        // 选中函数
+        let aa = function () {
+            a()
+            d[index].className = "d dd"
+        }
+        // 设置启动轮播图的时间函数
+        function ts() {
+            time = setInterval(function () {
+                aa()
+                index++
+                b.style.backgroundImage = "url('" + [index] + ".jpg')"
+                if (index == 5) {
+                    index = 0
+                }
+            }, 1500);
+        }
+        for (let i = 0; i < d.length; i++) {
+            d[i].onmousemove = function () {
+                b.style.backgroundImage = "url('" + [i + 1] + ".jpg')"
+                a()
+                clearInterval(time)
+                index = i + 1
+                ts()
+            }
+        }
+        window.onload = function () {
+            ts();
+        }
+    </script>
+</body>
+
+</html>
